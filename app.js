@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT = 8800
+const PORT = process.env.PORT || 8800
 
 // Middleware to parse incoming request bodies (form data)
 app.use(bodyParser.urlencoded({ extended: true }));
