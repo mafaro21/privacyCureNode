@@ -31,7 +31,7 @@ app.post('/submit-form', (req, res) => {
 
 app.get('/cdpa', (req, res) => {
     const fileName = req.params.fileName;
-    const filePath = path.join('./documents/CyberDataProtectionAct.pdf');
+    const filePath = path.join('./documents/Cyber & Data Protection Act Cap1207 No 5 of 2021.pdf');
 
     res.download(filePath, fileName, (err) => {
     })
@@ -48,6 +48,14 @@ app.get('/cdpr', (req, res) => {
 app.get('/license', (req, res) => {
     const fileName = req.params.fileName;
     const filePath = path.join('./documents/Data Controller Application Form.docx');
+
+    res.download(filePath, fileName, (err) => {
+    })
+})
+
+app.get('/implementation', (req, res) => {
+    const fileName = req.params.fileName;
+    const filePath = path.join('./documents/Implementation Guidelines on Appointment, Roles, Responsibilities, Training and Certification of Data Protection Officers.pdf');
 
     res.download(filePath, fileName, (err) => {
     })
