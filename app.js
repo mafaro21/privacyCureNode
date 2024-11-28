@@ -61,6 +61,14 @@ app.get('/implementation', (req, res) => {
     })
 })
 
+app.get('/breach', (req, res) => {
+    const fileName = req.params.fileName;
+    const filePath = path.join('./documents/DP3 - DATA BREACH NOTIFICATION FORM.pdf');
+
+    res.download(filePath, fileName, (err) => {
+    })
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
