@@ -53,9 +53,10 @@ app.get('/license', (req, res) => {
     })
 })
 
-app.get('/implementation', (req, res) => {
+app.get('/guidelines', (req, res) => {
     const fileName = req.params.fileName;
     const filePath = path.join('./documents/Implementation Guidelines on Appointment, Roles, Responsibilities, Training and Certification of Data Protection Officers.pdf');
+    // const filePath = path.join('./documents/Implementation and Guidelines for Data Protection Officers.pdf');
 
     res.download(filePath, fileName, (err) => {
     })
@@ -64,6 +65,14 @@ app.get('/implementation', (req, res) => {
 app.get('/breach', (req, res) => {
     const fileName = req.params.fileName;
     const filePath = path.join('./documents/DP3 - DATA BREACH NOTIFICATION FORM.pdf');
+
+    res.download(filePath, fileName, (err) => {
+    })
+})
+
+app.get('/dpo', (req, res) => {
+    const fileName = req.params.fileName;
+    const filePath = path.join('./documents/DP2 - DPO NOTIFICATION FORM.pdf');
 
     res.download(filePath, fileName, (err) => {
     })
