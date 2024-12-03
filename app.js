@@ -78,6 +78,14 @@ app.get('/dpo', (req, res) => {
     })
 })
 
+app.get('/jd', (req, res) => {
+    const fileName = req.params.fileName;
+    const filePath = path.join('./documents/DATA PROTECTION OFFICER JOB DESCRIPTION.pdf');
+
+    res.download(filePath, fileName, (err) => {
+    })
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
