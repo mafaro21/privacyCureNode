@@ -86,6 +86,14 @@ app.get('/jd', (req, res) => {
     })
 })
 
+app.get('/licenseDC', (req, res) => {
+    const fileName = req.params.fileName;
+    const filePath = path.join('./documents/Licensing of data Controllers Guideline.pdf');
+
+    res.download(filePath, fileName, (err) => {
+    })
+})
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
